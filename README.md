@@ -86,7 +86,7 @@ We trained ALBERT model on config version 2 of base and large.
 }
 ```
 Create tfrecord for training data:
-```python
+```bash
 python create_pretraining_data.py \
   --input_file={path to wiki data} \
   --dupe_factor=10 \
@@ -122,12 +122,20 @@ python run_pretraining.py \
 ## Pretrained model
 We run ~1M steps for base config and ~250k for large config.
 
-Loss value and eval results show in below:
-<<image>>
-<<image>>
+Eval result at step 1001000
 
+```bash
+***** Eval results *****
+global_step = 1001000
+loss = 1.6706645
+masked_lm_accuracy = 0.66281766
+masked_lm_loss = 1.6631233
+sentence_order_accuracy = 0.9998438
+sentence_order_loss = 0.00065024174
+sentence_order_loss = 0.00065024174
+``` 
 
-You could download the pretrained models at [here]()
+You could download the pretrained models of base config at [here](https://drive.google.com/drive/folders/1paBmrVcmPi7et5rTMNziusItomAc54xZ?usp=sharing)
 
 ## Experimential Results
 Coming soon
@@ -138,7 +146,6 @@ Research supported with Cloud TPUs from Google's TensorFlow Research Cloud (TFRC
 
 Thank so much @lampts, @dal team for suporting me to finish this project.
 
-## How to cite this work        
-Please cite this repository https://github.com/ngoanpv/albert_vi
-
-Email me or create an issue for any questions .
+## Conclusion     
+I hope to receiving contributions and feedback form everyone,
+Email [me](ngoanpham1196@gmail.com) or create an issue for any questions .
